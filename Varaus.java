@@ -20,5 +20,6 @@ public Varaus(String varaajanNimi, String lisatiedot) {
     }
 public String varauksenTiedot() {
     return this.varaajanNimi;
+    return this.lisatiedot;
 }
 }
