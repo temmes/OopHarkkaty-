@@ -11,10 +11,12 @@ package oopharkkatyo;
  */
 public class Varaus {
     private String varaajanNimi;
+    private String lisatiedot;
     
 
-public Varaus(String varaajanNimi) {
+public Varaus(String varaajanNimi, String lisatiedot) {
     this.varaajanNimi = varaajanNimi;
+    this.lisatiedot = lisatiedot;
     }
 public String varauksenTiedot() {
     return this.varaajanNimi;
