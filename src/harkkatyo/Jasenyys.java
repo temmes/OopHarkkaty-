@@ -1,16 +1,18 @@
+package harkkatyo;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Jasenyys {
-	private ArrayList<Jasen> jasenLista;
+	private static ArrayList<Jasen> jasenLista;
 	
 	public Jasenyys(){
 		jasenLista = new ArrayList<Jasen>(1000);
 	}
-	public boolean onkoJasen(int numero){
+	public static boolean onkoJasen(int numero){
 		
-		for(Jasen i:jasenLista){
-			if(i.annaJasenNumero() == numero){
+		for(int i = 0; i < jasenLista.size(); i++){
+		try{	if(jasenLista.get(i).annaJasenNumero() == numero){
 				return true;
 			}
 			else{
@@ -34,11 +36,11 @@ public class Jasenyys {
 						}
 					}
 				}
-			}
+			}}catch(NullPointerException npe){}
 		}
 		return false;
 	}
-	public void lisaaJasen(String nimi){
+	public static void lisaaJasen(String nimi){
 		for(int i=0; i<jasenLista.size(); i++){
 			if(jasenLista.get(i) == null){
 				Jasen jasen = new Jasen();

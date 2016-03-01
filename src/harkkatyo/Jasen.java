@@ -1,3 +1,4 @@
+package harkkatyo;
 
 public class Jasen {
 	private String nimi;
